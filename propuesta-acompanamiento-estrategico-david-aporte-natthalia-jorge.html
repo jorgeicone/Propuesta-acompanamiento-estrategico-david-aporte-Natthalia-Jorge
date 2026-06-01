@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propuesta de Acompañamiento Estratégico · David Aponte</title>
+<meta name="description" content="Acompañamiento estratégico de 6 meses para David Aponte — por Nathalia & Jorge. Autoridad de marca, metodología propia y ecosistema digital en Hotmart." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Construyamos juntos el ecosistema que tu visión a 24 meses exige." />
+<meta property="og:description" content="Acompañamiento estratégico de 6 meses para David Aponte — por Nathalia & Jorge." />
+<meta property="og:image" content="https://jorgeicone.github.io/propuesta-david-aponte/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://jorgeicone.github.io/propuesta-david-aponte/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Construyamos juntos el ecosistema que tu visión a 24 meses exige." />
+<meta name="twitter:description" content="Acompañamiento estratégico de 6 meses para David Aponte — por Nathalia & Jorge." />
+<meta name="twitter:image" content="https://jorgeicone.github.io/propuesta-david-aponte/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   PROPUESTA DAVID APONTE — Sistema de diseño
+   Editorial premium · verde profundo de autoridad
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Neutros cálidos (blanco y negro editorial) */
+  --paper:        oklch(0.976 0.006 95);
+  --paper-2:      oklch(0.951 0.008 92);
+  --paper-3:      oklch(0.928 0.010 90);
+  --ink:          oklch(0.205 0.014 152);
+  --ink-soft:     oklch(0.405 0.018 150);
+  --ink-faint:    oklch(0.560 0.016 150);
+  --line:         oklch(0.872 0.012 120);
+  --line-soft:    oklch(0.912 0.010 110);
+
+  /* Verde de autoridad — único acento */
+  --green:        oklch(0.430 0.072 158);
+  --green-bright: oklch(0.560 0.095 156);
+  --green-deep:   oklch(0.268 0.044 160);
+  --green-night:  oklch(0.205 0.038 162);
+  --green-haze:   oklch(0.430 0.072 158 / 0.10);
+
+  /* Susurro de latón para lujo en secciones oscuras */
+  --brass:        oklch(0.790 0.072 86);
+
+  /* Azul de confianza — acento puntual para datos y enlaces */
+  --blue:         oklch(0.520 0.110 245);
+  --blue-bright:  oklch(0.640 0.115 240);
+
+  /* Tipografía */
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans:  "Hanken Grotesk", system-ui, sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Medidas */
+  --maxw: 1240px;
+  --gutter: clamp(20px, 5vw, 80px);
+  --radius: 4px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* ---------- Tipografía base ---------- */
+.serif { font-family: var(--serif); font-weight: 400; }
+.mono  { font-family: var(--mono); }
+
+.display {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+em, .italic { font-style: italic; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.eyebrow.faint { color: var(--ink-faint); }
+
+/* ---------- Layout helpers ---------- */
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: clamp(80px, 12vh, 170px); position: relative; }
+.divider { border: none; border-top: 1px solid var(--line); }
+
+/* ---------- Reveal animation ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  will-change: opacity, transform;
+}
+[data-reveal].in { opacity: 1; transform: none; }
+[data-reveal][data-delay="1"] { transition-delay: 0.08s; }
+[data-reveal][data-delay="2"] { transition-delay: 0.16s; }
+[data-reveal][data-delay="3"] { transition-delay: 0.24s; }
+[data-reveal][data-delay="4"] { transition-delay: 0.32s; }
+[data-reveal][data-delay="5"] { transition-delay: 0.40s; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px var(--gutter);
+  mix-blend-mode: normal;
+  transition: background 0.5s var(--ease), border-color 0.5s var(--ease), padding 0.4s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: oklch(0.976 0.006 95 / 0.82);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom: 1px solid var(--line);
+  padding-block: 13px;
+}
+.nav__brand { font-family: var(--serif); font-size: 21px; letter-spacing: -0.01em; display: flex; align-items: baseline; gap: 10px; }
+.nav__brand .amp { color: var(--green); font-style: italic; }
+.nav__tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); border-left: 1px solid var(--line); padding-left: 10px; }
+.nav__links { display: flex; gap: 30px; align-items: center; }
+.nav__links a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ink-soft); transition: color 0.3s; position: relative; }
+.nav__links a::after { content: ""; position: absolute; left: 0; bottom: -5px; width: 0; height: 1px; background: var(--blue); transition: width 0.4s var(--ease); }
+.nav__links a:hover { color: var(--ink); }
+.nav__links a:hover::after { width: 100%; }
+@media (max-width: 860px) { .nav__links .hide-sm { display: none; } }
+
+/* progress bar */
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--green); z-index: 101; width: 0; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--sans); font-weight: 500; font-size: 15px;
+  padding: 14px 26px; border-radius: 100px;
+  transition: transform 0.3s var(--ease), background 0.3s, color 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.01em;
+}
+.btn--primary { background: var(--green); color: var(--paper); box-shadow: 0 1px 0 oklch(0.430 0.072 158 / 0.4); }
+.btn--primary:hover { background: var(--ink); transform: translateY(-2px); box-shadow: 0 14px 30px oklch(0.205 0.014 152 / 0.22); }
+.btn--ghost { color: var(--ink); border: 1px solid var(--line); }
+.btn--ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
+.btn .arrow { transition: transform 0.3s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+.btn--light { background: var(--paper); color: var(--green-deep); }
+.btn--light:hover { background: var(--brass); color: var(--green-night); transform: translateY(-2px); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+  padding-top: 110px; padding-bottom: 60px;
+}
+.hero__grain { position: absolute; inset: 0; pointer-events: none; opacity: 0.5; z-index: 0; }
+.hero__topline { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; margin-bottom: clamp(28px, 5vh, 60px); }
+.hero__topline .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.hero__h1 {
+  font-size: clamp(44px, 7.4vw, 104px);
+  line-height: 1.04;
+  margin-bottom: clamp(76px, 9vh, 120px);
+  max-width: 16ch;
+}
+.hero__h1 .accent { color: var(--green); font-style: italic; }
+.hero__lede {
+  font-size: clamp(17px, 2vw, 22px);
+  max-width: 56ch; color: var(--ink-soft); line-height: 1.55;
+  margin-bottom: clamp(30px, 5vh, 48px);
+}
+.hero__lede strong { color: var(--ink); font-weight: 600; }
+.hero__cta { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.hero__scroll { position: absolute; bottom: 26px; left: var(--gutter); display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+.hero__scroll .line { width: 46px; height: 1px; background: var(--ink-faint); position: relative; overflow: hidden; }
+.hero__scroll .line::after { content: ""; position: absolute; inset: 0; background: var(--green); transform: translateX(-100%); animation: scrollline 2.4s var(--ease) infinite; }
+@keyframes scrollline { 0% { transform: translateX(-100%); } 50% { transform: translateX(0); } 100% { transform: translateX(100%); } }
+
+/* floating 3D seal */
+.seal {
+  position: absolute; right: var(--gutter); top: 50%; transform: translateY(-50%);
+  width: clamp(180px, 24vw, 340px); aspect-ratio: 1; z-index: 0;
+  pointer-events: none;
+}
+.seal svg { width: 100%; height: 100%; }
+.seal__ring { animation: spin 44s linear infinite; transform-origin: center; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 1024px) { .seal { opacity: 0.12; right: -6%; } }
+
+/* ---------- Expediente strip ---------- */
+.dossier { background: var(--ink); color: var(--paper); }
+.dossier__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.dossier__cell { padding: 30px clamp(18px, 2vw, 34px); border-right: 1px solid oklch(1 0 0 / 0.08); border-bottom: 1px solid oklch(1 0 0 / 0.08); }
+.dossier__cell:nth-child(4n) { border-right: none; }
+.dossier__k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(1 0 0 / 0.45); margin-bottom: 10px; }
+.dossier__v { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); line-height: 1.05; }
+.dossier__v .u { color: var(--blue-bright); }
+@media (max-width: 760px) { .dossier__grid { grid-template-columns: repeat(2, 1fr); } .dossier__cell:nth-child(4n){border-right:1px solid oklch(1 0 0/0.08);} .dossier__cell:nth-child(2n){border-right:none;} }
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+.shead { max-width: 24ch; }
+.shead__title { font-size: clamp(34px, 5.4vw, 76px); margin-block: 18px 24px; }
+.shead__title em { color: var(--green); }
+.shead__sub { font-size: clamp(17px, 1.6vw, 20px); color: var(--ink-soft); max-width: 52ch; }
+.shead__sub strong { color: var(--ink); font-weight: 600; }
+
+/* number index */
+.bignum { font-family: var(--serif); font-size: clamp(40px, 7vw, 96px); color: var(--green); line-height: 1; }
+
+/* ============================================================
+   MOMENTO CERO — stats
+   ============================================================ */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.stat { background: var(--paper); padding: clamp(26px, 3vw, 44px) clamp(20px, 2.2vw, 34px); }
+.stat__num { font-family: var(--serif); font-size: clamp(42px, 5.5vw, 76px); line-height: 0.95; letter-spacing: -0.02em; }
+.stat__num .suffix { color: var(--blue); }
+.stat__label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--ink-soft); margin-top: 12px; text-transform: uppercase; }
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* moment cards */
+.moments { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 44px); margin-top: 60px; }
+.moment { border-top: 1px solid var(--ink); padding-top: 26px; }
+.moment__date { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--green); text-transform: uppercase; }
+.moment__t { font-family: var(--serif); font-size: clamp(24px, 2.6vw, 34px); margin: 14px 0 14px; }
+.moment__d { color: var(--ink-soft); font-size: 17px; }
+.moment__d strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .moments { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   ARQUETIPOS
+   ============================================================ */
+.arch { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(36px, 5vw, 90px); align-items: center; }
+.arch__dom { }
+.arch__pct { font-family: var(--serif); font-size: clamp(96px, 18vw, 230px); line-height: 0.82; color: var(--green); letter-spacing: -0.03em; }
+.arch__name { font-family: var(--serif); font-size: clamp(28px, 3.4vw, 46px); margin-top: 4px; }
+.arch__body { color: var(--ink-soft); margin-top: 22px; font-size: 17px; max-width: 46ch; }
+.arch__body strong { color: var(--ink); font-weight: 600; }
+.arch__body + .arch__body { margin-top: 16px; }
+
+.bars { display: flex; flex-direction: column; gap: 22px; }
+.bar__top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
+.bar__name { font-size: 15px; font-weight: 500; }
+.bar__val { font-family: var(--mono); font-size: 14px; color: var(--blue); }
+.bar__track { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.bar__fill { height: 100%; width: 0; background: var(--ink); border-radius: 2px; transition: width 1.3s var(--ease); }
+.bar:first-child .bar__fill { background: var(--green); }
+@media (max-width: 860px) { .arch { grid-template-columns: 1fr; } }
+
+/* objection block */
+.objection { background: var(--green-deep); color: var(--paper); border-radius: var(--radius); }
+.objection__quote { font-family: var(--serif); font-size: clamp(22px, 3vw, 38px); line-height: 1.25; max-width: 24ch; }
+.objection__quote .mark { color: var(--brass); }
+.objection__cite { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: oklch(1 0 0 / 0.5); margin-top: 24px; text-transform: uppercase; }
+.objection__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: oklch(1 0 0 / 0.12); border-radius: var(--radius); overflow: hidden; margin-top: 50px; }
+.ocard { background: var(--green-deep); padding: 30px clamp(20px, 2vw, 32px); }
+.ocard__k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); margin-bottom: 16px; }
+.ocard__t { font-family: var(--serif); font-size: clamp(20px, 2vw, 26px); line-height: 1.15; }
+.ocard__t strong { color: var(--paper); }
+@media (max-width: 760px) { .objection__cards { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   ROADMAP
+   ============================================================ */
+.road { position: relative; }
+.road__rail { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 14px; margin-bottom: 8px; scrollbar-width: none; }
+.road__rail::-webkit-scrollbar { display: none; }
+.railchip {
+  flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px;
+  padding: 14px 20px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper); transition: all 0.4s var(--ease); min-width: 140px;
+}
+.railchip:hover { border-color: var(--green); transform: translateY(-2px); }
+.railchip.done { background: var(--paper-2); }
+.railchip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.railchip__m { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+.railchip__t { font-family: var(--serif); font-size: 18px; }
+.railchip.active .railchip__m { color: var(--green-bright); opacity: 1; }
+
+/* milestone full cards */
+.milestones { margin-top: 70px; display: flex; flex-direction: column; gap: clamp(70px, 9vh, 130px); }
+.ms { display: grid; grid-template-columns: 0.42fr 0.58fr; gap: clamp(28px, 4vw, 70px); }
+.ms__left { position: sticky; top: 120px; align-self: start; }
+.ms__index { display: flex; align-items: baseline; gap: 16px; }
+.ms__no { font-family: var(--serif); font-size: clamp(54px, 8vw, 110px); color: var(--green); line-height: 0.8; }
+.ms__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; padding: 5px 11px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-soft); text-transform: uppercase; }
+.tag--hot { border-color: var(--green); color: var(--green); }
+.tag--money { background: var(--green); color: var(--paper); border-color: var(--green); }
+.ms__title { font-family: var(--serif); font-size: clamp(30px, 4vw, 56px); line-height: 1; margin: 6px 0 20px; }
+.ms__intro { color: var(--ink-soft); font-size: 17px; max-width: 40ch; }
+
+.ms__skills { margin-top: 24px; max-width: 40ch; }
+.ms__skills-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.ms__skills-k::before { content: ""; width: 14px; height: 1px; background: var(--green); }
+.ms__skillchips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ms__skill { font-family: var(--mono); font-size: 11px; letter-spacing: 0.02em; padding: 6px 12px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-soft); background: var(--paper); transition: border-color 0.3s var(--ease), color 0.3s var(--ease); }
+.ms__skill:hover { border-color: var(--green); color: var(--green); }
+
+.ms__groups { display: flex; flex-direction: column; gap: 30px; }
+.group__h { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+.li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; padding: 9px 0; align-items: start; }
+.li__mk { font-family: var(--mono); font-size: 14px; color: var(--green); line-height: 1.5; }
+.li__mk.star { color: var(--brass); }
+.li__tx { font-size: 16px; color: var(--ink-soft); line-height: 1.5; }
+.li__tx strong { color: var(--ink); font-weight: 600; }
+.li.star-li { background: var(--green-haze); margin-inline: -14px; padding-inline: 14px; border-radius: var(--radius); }
+
+.hito { margin-top: 26px; padding: 22px 26px; border-radius: var(--radius); background: var(--ink); color: var(--paper); display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+.hito__badge { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-bright); writing-mode: vertical-rl; transform: rotate(180deg); border-right: 1px solid oklch(1 0 0/0.15); padding-right: 14px; }
+.hito__tx { font-size: 16px; line-height: 1.45; }
+.hito__tx strong { font-weight: 600; }
+
+/* ---- SMART objectives box ---- */
+.smart { margin-top: 26px; border-radius: var(--radius); background: var(--ink); color: var(--paper); overflow: hidden; }
+.smart__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 26px; border-bottom: 1px solid oklch(1 0 0 / 0.12); }
+.smart__badge { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-bright); }
+.smart__tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(1 0 0 / 0.45); border: 1px solid oklch(1 0 0 / 0.18); border-radius: 100px; padding: 5px 11px; }
+.smart__list { list-style: none; display: flex; flex-direction: column; }
+.smart__item { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: baseline; padding: 15px 26px; border-bottom: 1px solid oklch(1 0 0 / 0.08); }
+.smart__item:last-child { border-bottom: none; }
+.smart__metric { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); line-height: 1; color: var(--brass); min-width: 1.4em; text-align: center; font-variant-numeric: tabular-nums; }
+.smart__metric.sm { font-size: clamp(15px, 1.4vw, 18px); font-family: var(--mono); letter-spacing: 0.02em; }
+.smart__txt { font-size: 15px; line-height: 1.45; color: oklch(1 0 0 / 0.82); }
+.smart__txt strong { color: var(--paper); font-weight: 600; }
+@media (max-width: 860px) { .ms { grid-template-columns: 1fr; } .ms__left { position: static; } }
+
+/* ============================================================
+   MODELO ECONÓMICO
+   ============================================================ */
+.layers { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); }
+.layer { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(28px, 3vw, 46px); background: var(--paper); position: relative; overflow: hidden; }
+.layer--2 { background: var(--green-deep); color: var(--paper); border-color: var(--green-deep); }
+.layer__k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+.layer--2 .layer__k { color: var(--brass); }
+.layer__big { font-family: var(--serif); font-size: clamp(46px, 6vw, 84px); line-height: 0.92; margin: 16px 0 10px; letter-spacing: -0.02em; }
+.layer__note { font-size: 15px; color: var(--ink-soft); margin-bottom: 26px; }
+.layer--2 .layer__note { color: oklch(1 0 0 / 0.6); }
+.layer__note strong { color: var(--ink); font-weight: 600; }
+.layer--2 .layer__note strong { color: var(--paper); }
+.ltable { width: 100%; border-collapse: collapse; font-size: 15px; }
+.ltable td { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.layer--2 .ltable td { border-color: oklch(1 0 0 / 0.14); }
+.ltable tr:last-child td { border-bottom: none; font-weight: 600; }
+.ltable td:last-child { text-align: right; font-family: var(--mono); color: var(--blue); }
+.layer--2 .ltable td:last-child { color: var(--brass); }
+.layer__foot { margin-top: 22px; padding: 16px 18px; background: oklch(1 0 0 / 0.06); border-radius: var(--radius); font-size: 14px; line-height: 1.5; }
+.layer--2 .layer__foot strong { color: var(--brass); }
+@media (max-width: 860px) { .layers { grid-template-columns: 1fr; } }
+
+/* products entering coprod */
+.prods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 50px; }
+.prod { background: var(--paper); padding: 26px clamp(18px, 2vw, 28px); }
+.prod__phase { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+.prod__name { font-family: var(--serif); font-size: clamp(19px, 2vw, 25px); margin-top: 10px; line-height: 1.1; }
+@media (max-width: 760px) { .prods { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   SIMULADOR
+   ============================================================ */
+.sim { background: var(--green-night); color: var(--paper); border-radius: var(--radius); overflow: hidden; }
+.sim__grid { display: grid; grid-template-columns: 0.9fr 1.1fr; }
+.sim__controls { padding: clamp(30px, 4vw, 56px); border-right: 1px solid oklch(1 0 0 / 0.1); }
+.sim__out { padding: clamp(30px, 4vw, 56px); }
+.ctrl { margin-bottom: 38px; }
+.ctrl__top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.ctrl__label { font-size: 15px; color: oklch(1 0 0 / 0.7); max-width: 24ch; }
+.ctrl__val { font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--brass); }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; background: oklch(1 0 0 / 0.2); border-radius: 2px; outline: none; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--brass); cursor: pointer; border: 4px solid var(--green-night); box-shadow: 0 0 0 1px var(--brass); transition: transform 0.2s; }
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--brass); cursor: pointer; border: 4px solid var(--green-night); }
+
+.sim__outlabel { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); margin-bottom: 26px; }
+.payout { display: flex; flex-direction: column; gap: 20px; }
+.payrow { }
+.payrow__top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.payrow__name { font-size: 15px; }
+.payrow__name .role { font-family: var(--mono); font-size: 11px; color: oklch(1 0 0 / 0.45); display: block; letter-spacing: 0.06em; margin-top: 2px; }
+.payrow__amt { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 30px); }
+.payrow__amt.lead { color: var(--brass); }
+.payrow__track { height: 2px; background: oklch(1 0 0 / 0.14); border-radius: 2px; overflow: hidden; }
+.payrow__fill { height: 100%; width: 0; background: oklch(1 0 0 / 0.5); transition: width 0.6s var(--ease); }
+.payrow.lead .payrow__fill { background: var(--brass); }
+
+.sim__accum { margin-top: 38px; padding-top: 30px; border-top: 1px solid oklch(1 0 0 / 0.14); display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.accum__k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(1 0 0 / 0.5); }
+.accum__v { font-family: var(--serif); font-size: clamp(26px, 3vw, 40px); margin-top: 6px; }
+.accum__v.roi { color: var(--brass); }
+.sim__disc { font-size: 13px; color: oklch(1 0 0 / 0.5); line-height: 1.5; margin-top: 30px; max-width: 60ch; }
+.sim__disc strong { color: oklch(1 0 0 / 0.8); }
+@media (max-width: 860px) { .sim__grid { grid-template-columns: 1fr; } .sim__controls { border-right: none; border-bottom: 1px solid oklch(1 0 0/0.1); } }
+
+/* ============================================================
+   BLINDAJE
+   ============================================================ */
+.shield { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 44px); }
+.scol { }
+.scol__h { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.scol__h .ico { width: 34px; height: 34px; flex: 0 0 auto; }
+.scol__h .t { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 30px); }
+.scol__item { display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.scol__item .mk { color: var(--green); font-family: var(--mono); }
+.scol__item .tx { font-size: 16px; color: var(--ink-soft); }
+.scol__item .tx strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .shield { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   CTA / CLOSE
+   ============================================================ */
+.close { background: var(--ink); color: var(--paper); text-align: center; position: relative; overflow: hidden; }
+.close__h { font-family: var(--serif); font-size: clamp(38px, 6.4vw, 96px); line-height: 1.0; max-width: 18ch; margin-inline: auto; }
+.close__h em { color: var(--green-bright); }
+.close__sub { color: oklch(1 0 0 / 0.6); font-size: clamp(17px, 1.8vw, 21px); max-width: 50ch; margin: 30px auto 44px; }
+.close__valid { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(1 0 0 / 0.45); margin-top: 40px; }
+.close__valid strong { color: var(--brass); }
+
+.footer { background: var(--green-night); color: oklch(1 0 0 / 0.7); padding-block: 60px; }
+.footer__grid { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+.footer__brand { font-family: var(--serif); font-size: 28px; color: var(--paper); }
+.footer__brand .amp { color: var(--brass); font-style: italic; }
+.footer__meta { font-size: 14px; max-width: 46ch; line-height: 1.6; }
+.footer__conf { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(1 0 0 / 0.4); }
+
+/* ============================================================
+   AUTORIDAD — quiénes responden
+   ============================================================ */
+.authority { background: var(--ink); color: var(--paper); }
+.authority .eyebrow { color: var(--brass); }
+.authority .shead__title { color: var(--paper); margin-bottom: 52px; }
+.authority .shead__title em { color: var(--green-bright); }
+.authority .shead__sub { color: oklch(1 0 0 / 0.62); }
+.authority .shead__sub strong { color: var(--paper); }
+
+.auth__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 4vw, 64px); margin-top: clamp(48px, 6vw, 76px); grid-template-rows: auto auto auto auto auto; align-items: start; }
+.auth { display: grid; grid-row: 1 / span 5; grid-template-rows: subgrid; }
+.auth__top { display: flex; gap: 24px; align-items: flex-start; }
+.auth__photo { width: 124px; height: 124px; border-radius: 6px; object-fit: cover; object-position: top center; flex: 0 0 auto; border: 1px solid oklch(1 0 0 / 0.16); background: var(--green-night); }
+.auth__role { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); min-height: 2.6em; }
+.auth__name { font-family: var(--serif); font-size: clamp(30px, 3.6vw, 46px); line-height: 0.98; margin-top: 9px; }
+.auth__tagline { color: oklch(1 0 0 / 0.58); font-size: 13.5px; margin-top: 11px; line-height: 1.45; }
+.auth__body { color: oklch(1 0 0 / 0.74); font-size: 16px; line-height: 1.62; margin-top: 26px; }
+.auth__body strong { color: var(--paper); font-weight: 600; }
+.auth__body + .auth__body { margin-top: 14px; }
+
+.auth__stats { display: flex; margin-top: 30px; border-top: 1px solid oklch(1 0 0 / 0.15); border-bottom: 1px solid oklch(1 0 0 / 0.15); }
+.auth__stat { flex: 1; padding: 18px 0; border-right: 1px solid oklch(1 0 0 / 0.15); }
+.auth__stat:last-child { border-right: none; }
+.auth__num { font-family: var(--serif); font-size: clamp(30px, 3.4vw, 44px); line-height: 0.9; color: var(--green-bright); letter-spacing: -0.01em; }
+.auth__num .suffix { font-size: 0.46em; color: var(--brass); margin-left: 1px; }
+.auth__slabel { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(1 0 0 / 0.5); margin-top: 10px; line-height: 1.35; }
+
+.auth__inproj { margin-top: 0; padding: 20px 22px; background: oklch(1 0 0 / 0.045); border-left: 2px solid var(--green-bright); border-radius: 0 4px 4px 0; align-self: start; }
+.auth__inproj .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 9px; }
+.auth__inproj p { font-size: 15px; line-height: 1.5; color: oklch(1 0 0 / 0.8); }
+.auth__inproj strong { color: var(--paper); font-weight: 600; }
+.auth__stats + .auth__inproj { margin-top: 28px; }
+
+.auth__btn { display: inline-flex; align-items: center; gap: 10px; align-self: start; margin-top: 18px; padding: 13px 22px; border: 1px solid oklch(1 0 0 / 0.28); border-radius: 100px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em; color: var(--paper); text-transform: uppercase; transition: background 0.3s var(--ease), border-color 0.3s var(--ease), color 0.3s var(--ease); }
+.auth__btn:hover { background: var(--green-bright); border-color: var(--green-bright); color: var(--green-night); }
+.auth__btn .arrow { transition: transform 0.3s var(--ease); }
+.auth__btn:hover .arrow { transform: translateX(4px); }
+
+.auth__insts { margin-top: clamp(50px, 6vw, 76px); padding-top: 32px; border-top: 1px solid oklch(1 0 0 / 0.15); }
+.auth__insts-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(1 0 0 / 0.45); margin-bottom: 20px; }
+.auth__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.auth__chip { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.03em; padding: 8px 14px; border: 1px solid oklch(1 0 0 / 0.18); border-radius: 100px; color: oklch(1 0 0 / 0.72); }
+.auth__chip.is-star { border-color: var(--brass); color: var(--brass); }
+
+@media (max-width: 860px) { .auth__grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 52px; } .auth { grid-row: auto; grid-template-rows: none; display: flex; flex-direction: column; } .auth__role { min-height: 0; } .auth__inproj { margin-top: 28px; } }
+@media (max-width: 520px) { .auth__photo { width: 92px; height: 92px; } .auth__top { gap: 18px; } }
+
+/* ============================================================
+   RUBROS DEL CLIENTE — costos gestionados directamente
+   ============================================================ */
+#rubros .shead__title { margin-bottom: 48px; }
+.rubros { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 56px; }
+.rubro { background: var(--paper); padding: clamp(24px, 2.6vw, 38px); display: flex; flex-direction: column; }
+.rubro__k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.rubro__name { font-family: var(--serif); font-size: clamp(21px, 2.1vw, 27px); line-height: 1.08; }
+.rubro__desc { font-size: 14.5px; color: var(--ink-soft); line-height: 1.5; margin-top: 12px; }
+.rubro__items { display: flex; flex-direction: column; margin-top: 22px; }
+.ritem { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--line-soft); }
+.ritem:first-child { border-top: none; padding-top: 0; }
+.ritem__t { font-size: 14.5px; color: var(--ink); line-height: 1.42; }
+.ritem__t small { display: block; color: var(--ink-faint); font-size: 12.5px; line-height: 1.4; margin-top: 4px; }
+.ritem__p { font-family: var(--mono); font-size: 13px; color: var(--blue); white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+.rubro__note { margin-top: 16px; font-size: 12.5px; color: var(--ink-faint); line-height: 1.5; font-style: italic; }
+.rubro--ia { background: var(--ink); color: var(--paper); }
+.rubro--ia .rubro__k { color: var(--brass); }
+.rubro--ia .rubro__name { color: var(--paper); }
+.rubro--ia .rubro__desc { color: oklch(1 0 0 / 0.62); }
+.rubro--ia .ritem { border-top-color: oklch(1 0 0 / 0.12); }
+.rubro--ia .ritem__t { color: var(--paper); }
+.rubro--ia .ritem__t small { color: oklch(1 0 0 / 0.5); }
+.rubro--ia .ritem__p { color: var(--green-bright); }
+.rubro--ia .rubro__note { color: oklch(1 0 0 / 0.55); }
+.rubros__foot { margin-top: 24px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; max-width: 70ch; }
+.rubros__foot strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .rubros { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   DEDICACIÓN REAL — la punta del iceberg
+   ============================================================ */
+.dedica { background: var(--ink); color: var(--paper); }
+.dedica .eyebrow { color: var(--brass); }
+.dedica .shead__title { color: var(--paper); margin-bottom: 92px; }
+.dedica .shead__title em { color: var(--green-bright); }
+.dedica .shead__sub { color: oklch(1 0 0 / 0.62); }
+.dedica .shead__sub strong { color: var(--paper); }
+
+/* Tres cifras grandes */
+.ded__nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: oklch(1 0 0 / 0.14); border: 1px solid oklch(1 0 0 / 0.14); border-radius: var(--radius); overflow: hidden; margin-top: clamp(44px, 5vw, 64px); }
+.ded__num { background: var(--ink); padding: clamp(26px, 3vw, 40px); }
+.ded__num .n { font-family: var(--serif); font-size: clamp(48px, 7vw, 92px); line-height: 0.86; letter-spacing: -0.02em; }
+.ded__num.is-small .n { color: oklch(1 0 0 / 0.5); }
+.ded__num.is-mid .n { color: var(--paper); }
+.ded__num.is-big .n { color: var(--green-bright); }
+.ded__num .suffix { font-size: 0.4em; color: var(--brass); margin-left: 2px; }
+.ded__num .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(1 0 0 / 0.55); margin-top: 16px; line-height: 1.4; }
+
+/* Barra ratio: lo que ves vs lo que no ves */
+.ded__ratio { margin-top: clamp(40px, 5vw, 60px); }
+.ded__ratio-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(1 0 0 / 0.5); margin-bottom: 16px; }
+.ded__rtrack { display: flex; height: 64px; border-radius: 5px; overflow: hidden; background: oklch(1 0 0 / 0.06); }
+.ded__rseg { display: flex; align-items: center; padding: 0 16px; width: var(--w); white-space: nowrap; overflow: hidden; }
+.ded__rseg .rs-h { font-family: var(--serif); font-size: 22px; line-height: 1; }
+.ded__rseg .rs-t { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 12px; opacity: 0.85; }
+.ded__rseg--live { background: var(--green-bright); color: var(--green-night); flex: 0 0 var(--w); }
+.ded__rseg--off { background: oklch(1 0 0 / 0.10); color: var(--paper); border-left: 1px solid var(--ink); flex: 0 0 var(--w); }
+
+/* Barras por persona, segmentadas en vivo + off */
+.ded__people { margin-top: clamp(44px, 5vw, 64px); display: flex; flex-direction: column; gap: 30px; }
+.dedbar__top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.dedbar__name { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 30px); }
+.dedbar__role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; color: oklch(1 0 0 / 0.5); margin-left: 14px; }
+.dedbar__tot { font-family: var(--mono); font-size: 13px; color: var(--green-bright); white-space: nowrap; }
+.dedbar__track { display: flex; height: 30px; background: oklch(1 0 0 / 0.06); border-radius: 4px; overflow: hidden; }
+.dedbar__seg { height: 100%; width: var(--w); flex: 0 0 var(--w); }
+.dedbar__seg--live { background: var(--green-bright); }
+.dedbar__seg--off { background: oklch(1 0 0 / 0.16); }
+
+.ded__legend { display: flex; gap: 24px; margin-top: 26px; flex-wrap: wrap; }
+.ded__lg { display: flex; align-items: center; gap: 9px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: oklch(1 0 0 / 0.62); }
+.ded__lg .dot { width: 12px; height: 12px; border-radius: 3px; }
+.ded__lg .dot--live { background: var(--green-bright); }
+.ded__lg .dot--off { background: oklch(1 0 0 / 0.16); }
+
+/* Barras por tema (sin nombres) */
+.ded__topics { margin-top: clamp(40px, 5vw, 60px); }
+.ded__topics-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(1 0 0 / 0.5); margin-bottom: 26px; }
+.dtopic { margin-top: 26px; }
+.dtopic:first-of-type { margin-top: 0; }
+.dtopic__top { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 18px; margin-bottom: 12px; }
+.dtopic__name { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 23px); line-height: 1.18; color: var(--paper); }
+.dtopic__meta { font-family: var(--mono); font-size: 12.5px; color: var(--green-bright); white-space: nowrap; }
+.dtopic__track { height: 12px; background: oklch(1 0 0 / 0.07); border-radius: 100px; overflow: hidden; }
+.dtopic__fill { height: 100%; width: var(--w); background: var(--green-bright); border-radius: 100px; }
+
+/* Desglose del trabajo en off */
+.ded__break { margin-top: clamp(50px, 6vw, 76px); padding-top: 36px; border-top: 1px solid oklch(1 0 0 / 0.14); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); }
+.ded__bk-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 18px; }
+.ded__bk li { list-style: none; display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 11px 0; border-top: 1px solid oklch(1 0 0 / 0.10); font-size: 14.5px; color: oklch(1 0 0 / 0.8); }
+.ded__bk li:first-of-type { border-top: none; }
+.ded__bk li .h { font-family: var(--mono); font-size: 12.5px; color: oklch(1 0 0 / 0.55); white-space: nowrap; }
+.ded__foot { margin-top: clamp(40px, 5vw, 60px); font-size: 15px; line-height: 1.6; color: oklch(1 0 0 / 0.7); max-width: 72ch; }
+.ded__foot strong { color: var(--paper); font-weight: 600; }
+
+@media (max-width: 720px) {
+  .ded__nums { grid-template-columns: 1fr; }
+  .ded__break { grid-template-columns: 1fr; gap: 36px; }
+  .dedbar__role { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- grain filter (subtle paper texture) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.04"/></feComponentTransfer></filter>
+</svg>
+
+<div class="scroll-progress"></div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav__brand">Nathalia <span class="amp">&amp;</span> Jorge <span class="nav__tag">Propuesta · Confidencial</span></div>
+  <div class="nav__links">
+    <a href="#arquetipo" class="hide-sm">Perfil</a>
+    <a href="#autoridad" class="hide-sm">Quiénes somos</a>
+    <a href="#metodo" class="hide-sm">El método</a>
+    <a href="#dedicacion" class="hide-sm">Dedicación</a>
+    <a href="#modelo" class="hide-sm">Modelo</a>
+    <a href="#rubros" class="hide-sm">Rubros</a>
+    <a href="#blindaje" class="hide-sm">Blindaje</a>
+    <a href="#cta">Agendar →</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" data-screen-label="Hero">
+  <div class="hero__grain" data-plx="0.04" style="background:transparent"><svg width="100%" height="100%"><rect width="100%" height="100%" filter="url(#grain)"/></svg></div>
+
+  <div class="seal" data-plx="-0.06" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <g class="seal__ring">
+        <circle cx="100" cy="100" r="96" fill="none" stroke="oklch(0.430 0.072 158 / 0.35)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="78" fill="none" stroke="oklch(0.430 0.072 158 / 0.25)" stroke-width="1" stroke-dasharray="2 6"/>
+        <path id="sealtext" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0" fill="none"/>
+        <text font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="3" fill="oklch(0.430 0.072 158 / 0.7)">
+          <textPath href="#sealtext" startOffset="0%">SOCIEDAD · PIEL EN EL JUEGO · 6 MESES · 7 HITOS · </textPath>
+        </text>
+      </g>
+      <circle cx="100" cy="100" r="42" fill="none" stroke="oklch(0.430 0.072 158 / 0.4)" stroke-width="1"/>
+      <text x="100" y="96" text-anchor="middle" font-family="Instrument Serif, serif" font-size="30" fill="oklch(0.430 0.072 158)">N&amp;J</text>
+      <text x="100" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="2" fill="oklch(0.430 0.072 158 / 0.7)">DA · 2026</text>
+    </svg>
+  </div>
+
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="hero__topline" data-reveal>
+      <span class="eyebrow">Acompañamiento estratégico · 6 meses</span>
+      <span class="dot"></span>
+      <span class="eyebrow faint">Para David Aponte · Por Nathalia &amp; Jorge</span>
+    </div>
+    <h1 class="display hero__h1" data-reveal data-delay="1">Construyamos juntos el ecosistema que tu <span class="accent">visión a 24 meses</span> exige.</h1>
+    <p class="hero__lede" data-reveal data-delay="2">Una propuesta diseñada para <strong>David Alexander Aponte Becerra</strong>. No es una agencia más: es una sociedad con piel en el juego para construir tu autoridad, tu metodología y tu ecosistema digital en Hotmart.</p>
+    <div class="hero__cta" data-reveal data-delay="3">
+      <a href="#cta" class="btn btn--primary">Agendar sesión de decisión <span class="arrow">→</span></a>
+      <a href="#metodo" class="btn btn--ghost">Ver el método</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><span class="line"></span> Desliza</div>
+</header>
+
+<!-- ===================== EXPEDIENTE ===================== -->
+<section class="dossier">
+  <div class="dossier__grid">
+    <div class="dossier__cell"><div class="dossier__k">Cliente</div><div class="dossier__v">David A. Aponte B.</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Sector</div><div class="dossier__v">Educación financiera</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Arquetipo</div><div class="dossier__v">Maestro Digital</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Madurez</div><div class="dossier__v"><span class="u">75</span> / 100</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Meta 6 meses</div><div class="dossier__v"><span class="u">Ecosistema</span> digital</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Duración</div><div class="dossier__v">6 meses · 7 hitos</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Equipo</div><div class="dossier__v">Nathalia, Jorge, producción</div></div>
+    <div class="dossier__cell"><div class="dossier__k">Validez</div><div class="dossier__v">15 días</div></div>
+  </div>
+</section>
+
+<!-- ===================== MOMENTO CERO ===================== -->
+<section class="section" id="momento">
+  <div class="wrap">
+    <div class="shead" data-reveal>
+      <span class="eyebrow">Momento cero</span>
+      <h2 class="display shead__title">Esta propuesta no nace <em>en frío</em>.</h2>
+      <p class="shead__sub">Antes de hablar de precios y costos, ya invertimos tiempo en entenderte. El Momento Cero es la base sobre la que se construye todo lo demás.</p>
+    </div>
+
+    <div class="stats" data-reveal data-delay="1" style="margin-top:54px">
+      <div class="stat"><div class="stat__num"><span data-reveal data-count="1" data-dec="0">0</span></div><div class="stat__label">Reunión exploratoria</div></div>
+      <div class="stat"><div class="stat__num"><span data-reveal data-count="33" data-dec="0">0</span></div><div class="stat__label">Preguntas respondidas</div></div>
+      <div class="stat"><div class="stat__num"><span data-reveal data-count="8" data-dec="0">0</span></div><div class="stat__label">Dimensiones analizadas</div></div>
+      <div class="stat"><div class="stat__num"><span data-reveal data-count="75" data-dec="0">0</span><span class="suffix">/100</span></div><div class="stat__label">Madurez promedio</div></div>
+    </div>
+
+    <div class="moments">
+      <div class="moment" data-reveal>
+        <div class="moment__date">22 de mayo de 2026</div>
+        <h3 class="moment__t">Reunión exploratoria</h3>
+        <p class="moment__d">Sesión donde nos contaste tu visión, tus frustraciones y tu trayectoria como contador javeriano, mentor iNNpulsa y columnista de Portafolio. Ahí confirmamos que hay encaje real entre tu momento y nuestra forma de trabajar como <strong>socios estratégicos de marca y metodología</strong>.</p>
+      </div>
+      <div class="moment" data-reveal data-delay="1">
+        <div class="moment__date">Diagnóstico estructurado</div>
+        <h3 class="moment__t">33 preguntas, 8 dimensiones</h3>
+        <p class="moment__d">Cuestionario interactivo que respondiste. Resultado: arquetipo dominante <strong>Maestro Digital</strong> (23 %), complementarios <strong>Conferencista Mediático</strong> (19 %) y <strong>Líder de Comunidad</strong> (13 %). Diferencial declarado: <strong>"método pedagógico paso a paso replicable"</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===================== ARQUETIPO ===================== -->
+<section class="section" id="arquetipo">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:30ch">
+      <span class="eyebrow">Tu perfil estratégico</span>
+      <h2 class="display shead__title">Eres un perfil <em>híbrido</em>, y eso es bueno.</h2>
+      <p class="shead__sub">No eres un coach más. No eres un conferencista más. No eres un community builder más. Eres los tres a la vez, y por eso necesitas una propuesta que orqueste los tres mundos.</p>
+    </div>
+
+    <div class="arch" style="margin-top:70px">
+      <div class="arch__dom" data-reveal>
+        <span class="eyebrow faint">Arquetipo dominante</span>
+        <div class="arch__pct">23<span style="font-size:0.4em">%</span></div>
+        <div class="arch__name">El Maestro Digital</div>
+        <p class="arch__body">Eres quien <strong>empaqueta su conocimiento en metodología replicable</strong>. Tu mente piensa en escalera (básico, intermedio, avanzado), tu producto natural son cursos estructurados y tu instinto es <strong>enseñar, no solo inspirar</strong>.</p>
+        <p class="arch__body">Pero los complementarios revelan más: aspiras a escenarios mediáticos y quieres construir pertenencia. Esa combinación es la de un emprendedor digital de alto impacto en LATAM.</p>
+      </div>
+
+      <div data-reveal data-delay="1">
+        <span class="eyebrow faint" style="display:block;margin-bottom:26px">Complementarios y madurez</span>
+        <div class="bars">
+          <div class="bar"><div class="bar__top"><span class="bar__name">Conferencista Mediático</span><span class="bar__val">19 %</span></div><div class="bar__track"><div class="bar__fill" data-w="83"></div></div></div>
+          <div class="bar"><div class="bar__top"><span class="bar__name">Líder de Comunidad</span><span class="bar__val">13 %</span></div><div class="bar__track"><div class="bar__fill" data-w="57"></div></div></div>
+          <div class="bar"><div class="bar__top"><span class="bar__name">Autor Experto</span><span class="bar__val">11 %</span></div><div class="bar__track"><div class="bar__fill" data-w="48"></div></div></div>
+          <div class="bar"><div class="bar__top"><span class="bar__name">Estratega Premium</span><span class="bar__val">10 %</span></div><div class="bar__track"><div class="bar__fill" data-w="44"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OBJECIÓN / ANCLA ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="objection" data-reveal data-tilt="3" style="padding:clamp(34px,5vw,72px)">
+      <span class="eyebrow" style="color:var(--brass)">El ancla de esta propuesta</span>
+      <p class="objection__quote" style="margin-top:24px"><span class="mark">"</span>Que sean iguales a todas las agencias y consultores que he contratado hasta ahora: muchas palabras, pocos resultados pero sí alta preocupación por facturar mensualmente. Que no se tenga conocimiento específico en los retos a resolver.<span class="mark">"</span></p>
+      <div class="objection__cite">David Aponte · diagnóstico del 22 / 05 / 2026 · campo abierto</div>
+
+      <div class="objection__cards">
+        <div class="ocard"><div class="ocard__k">Objeción</div><div class="ocard__t">Piel en el juego, <strong>no facturación opaca.</strong> El modelo combina un fijo, un <strong>10% recibido por intercambio</strong> y la coproducción Hotmart perpetua.</div></div>
+        <div class="ocard"><div class="ocard__k">Tiempo</div><div class="ocard__t"><strong>Mes a mes, un hito verificable.</strong> Cada fase del método entrega un avance medible: de la auditoría de origen al lanzamiento y la autoridad.</div></div>
+        <div class="ocard"><div class="ocard__k">Meta</div><div class="ocard__t">Lo que el método construye: <strong>ecosistema digital, autoridad de marca</strong> y una metodología propia lista para escalar.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUTORIDAD ===================== -->
+<section class="section authority" id="autoridad" data-screen-label="Autoridad">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:36ch">
+      <span class="eyebrow">Quiénes responden por esto</span>
+      <h2 class="display shead__title">El <em>conocimiento específico</em> que tu reto exige.</h2>
+      <p class="shead__sub">No somos una agencia genérica de marketing. Detrás de esta propuesta hay dos trayectorias que se complementan exactamente en lo que tu proyecto necesita: <strong>autoridad de marca y monetización digital</strong> de un lado, <strong>arquitectura pedagógica replicable</strong> del otro.</p>
+    </div>
+
+    <div class="auth__grid">
+
+      <!-- JORGE -->
+      <div class="auth" data-reveal>
+        <div class="auth__top">
+          <img class="auth__photo" src="https://dossier.iconeialabs.com/jorge.png" alt="Jorge Hugo Pérez — Mentor, Speaker y Arquitecto de Marca Personal" />
+          <div>
+            <div class="auth__role">Marca personal · Ecosistemas digitales · Speaker</div>
+            <div class="auth__name">Jorge Hugo Pérez</div>
+            <div class="auth__tagline">CEO ICONE ialabs · Mentor certificado Politécnico Grancolombiano · Speaker EXMA · Nominado Mentor del Año EAN</div>
+          </div>
+        </div>
+        <div class="auth__bio">
+        <p class="auth__body"><strong>25+ años</strong> de carrera comercial en multinacionales como <strong>Nestlé, Nutresa, Kellogg's y CasaLuker</strong>, combinados con más de 15 años diseñando marcas personales, metodologías propias y ecosistemas digitales con ingresos recurrentes.</p>
+        <p class="auth__body">Experiencia directa en <strong>sectores regulados</strong> —financiero, alimentos, salud— donde claims, disclaimers y testimonios deben pasar revisión legal. Exactamente el terreno de tu curso de educación financiera y la AMV.</p>
+        </div>
+        <div class="auth__stats">
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="25" data-dec="0">0</span><span class="suffix">+</span></div><div class="auth__slabel">Años de cancha</div></div>
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="500" data-dec="0">0</span><span class="suffix">+</span></div><div class="auth__slabel">Empresas acompañadas</div></div>
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="300" data-dec="0">0</span><span class="suffix">+</span></div><div class="auth__slabel">Emprendedores · EAN Impacta</div></div>
+        </div>
+        <div class="auth__inproj">
+          <div class="k">En tu proyecto lidera</div>
+          <p>Marca personal con autoridad, <strong>esencia y método</strong>, ecosistema y monetización en <strong>Hotmart</strong>, sistema de speaker y red institucional para tu autoridad mediática.</p>
+        </div>
+        <a class="auth__btn" href="https://dossier.iconeialabs.com/" target="_blank" rel="noopener">Ver dossier completo de Jorge<span class="arrow">→</span></a>
+      </div>
+
+      <!-- NATHALIA -->
+      <div class="auth" data-reveal data-delay="1">
+        <div class="auth__top">
+          <img class="auth__photo" src="https://jorgeicone.github.io/dossier-nathalia/mentor.jpg" alt="Nathalia Velasco — Arquitecta Pedagógica y fundadora de Simoné" />
+          <div>
+            <div class="auth__role">Arquitectura pedagógica · Diseño curricular</div>
+            <div class="auth__name">Nathalia Velasco</div>
+            <div class="auth__tagline">CEO Simoné · Magíster en Educación (en curso) U. de la Sabana · Ponente TEDx · Reconocida por LinkedIn Noticias y El Espectador</div>
+          </div>
+        </div>
+        <div class="auth__bio">
+        <p class="auth__body"><strong>14 años</strong> de aula real y <strong>13 años</strong> al frente de Simoné, agencia pedagógica que ha diseñado programas formativos para <strong>más de 30 organizaciones</strong> de los sectores corporativo, educativo, cultural y público.</p>
+        <p class="auth__body">Especialista en convertir conocimiento experto en una <strong>arquitectura pedagógica replicable</strong>: pilares, perfil del estudiante, Ruta del Estudiante en niveles, sistema de evaluación y material didáctico con estándar editorial.</p>
+        </div>
+        <div class="auth__stats">
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="13" data-dec="0">0</span></div><div class="auth__slabel">Años liderando Simoné</div></div>
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="30" data-dec="0">0</span><span class="suffix">+</span></div><div class="auth__slabel">Organizaciones formadas</div></div>
+          <div class="auth__stat"><div class="auth__num"><span data-reveal data-count="6" data-dec="0">0</span></div><div class="auth__slabel">Segmentos etarios diseñados</div></div>
+        </div>
+        <div class="auth__inproj">
+          <div class="k">En tu proyecto lidera</div>
+          <p>El <strong>método pedagógico</strong>, la <strong>Ruta del Estudiante</strong> en niveles, la producción de material y las <strong>guías académicas y estructura institucional</strong> formal.</p>
+        </div>
+        <a class="auth__btn" href="https://jorgeicone.github.io/dossier-nathalia/?v=fix" target="_blank" rel="noopener">Ver dossier completo de Nathalia<span class="arrow">→</span></a>
+      </div>
+
+    </div>
+
+    <div class="auth__insts" data-reveal>
+      <div class="auth__insts-k">Validados, contratados o certificados por</div>
+      <div class="auth__chips">
+        <span class="auth__chip is-star">Mompreneurs · +20.000 emprendedoras LATAM</span>
+        <span class="auth__chip is-star">Programa Creadores · Nestlé</span>
+        <span class="auth__chip">Universidad EAN</span>
+        <span class="auth__chip">Politécnico Grancolombiano</span>
+        <span class="auth__chip">Universidad de la Sabana</span>
+        <span class="auth__chip">Universidad Nacional</span>
+        <span class="auth__chip">MinCiT · iNNpulsa</span>
+        <span class="auth__chip">GoFest</span>
+        <span class="auth__chip">Secretaría de Cultura · Bogotá</span>
+        <span class="auth__chip">EXMA</span>
+        <span class="auth__chip">TEDx</span>
+        <span class="auth__chip">El Espectador · LinkedIn Noticias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ROADMAP ===================== -->
+<section class="section" id="metodo">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:32ch">
+      <span class="eyebrow">El roadmap</span>
+      <h2 class="display shead__title">Momento Cero más 6 meses, <em>7 hitos verificables</em>.</h2>
+      <p class="shead__sub">Cada fase tiene un hito medible. Si no lo cumplimos, el mes siguiente va sin cargo hasta corregirlo. Esto no es marketing, es <strong>contractual</strong>.</p>
+    </div>
+
+    <div class="road" style="margin-top:56px" data-reveal>
+      <div class="road__rail">
+        <div class="railchip done" data-go="momento"><span class="railchip__m">Ya hecho</span><span class="railchip__t">Momento Cero</span></div>
+        <div class="railchip" data-go="ms-1"><span class="railchip__m">Mes 1</span><span class="railchip__t">Auditoría de Origen</span></div>
+        <div class="railchip" data-go="ms-2"><span class="railchip__m">Mes 2</span><span class="railchip__t">Kit de Marca</span></div>
+        <div class="railchip" data-go="ms-3"><span class="railchip__m">Mes 3</span><span class="railchip__t">Ruta del Estudiante</span></div>
+        <div class="railchip" data-go="ms-4"><span class="railchip__m">Mes 4</span><span class="railchip__t">Lanzamiento Hotmart</span></div>
+        <div class="railchip" data-go="ms-5"><span class="railchip__m">Mes 5</span><span class="railchip__t">SPEAKER · Parte 2</span></div>
+        <div class="railchip" data-go="ms-6"><span class="railchip__m">Mes 6</span><span class="railchip__t">Guías Académicas</span></div>
+      </div>
+    </div>
+
+    <div class="milestones">
+
+      <!-- MS1 -->
+      <article class="ms" id="ms-1" data-screen-label="Mes 1">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no">01</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag">Mes 1 · 1 hito</span><span class="tag tag--hot">Alta intensidad</span></div>
+          <h3 class="ms__title">Auditoría de Origen</h3>
+          <p class="ms__intro">Antes de construir nada nuevo, cerramos la llave de las fugas de reputación digital silenciosas. Auditamos a fondo, corregimos lo que le resta credibilidad a la promesa y convertimos el diagnóstico en un activo de captación. Y empezamos por lo esencial: un diagnóstico de David como persona, no solo de su ecosistema.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Autoconocimiento y coherencia</span>
+              <span class="ms__skill">Comunicación de speaker</span>
+              <span class="ms__skill">Manejo de la frustración</span>
+              <span class="ms__skill">Higiene digital</span>
+              <span class="ms__skill">Cumplimiento (AMV / disclaimers)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Diagnóstico del ser humano David</div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx"><strong>No empezamos por la marca, empezamos por la persona.</strong> Diagnóstico de <strong>habilidades blandas, capacidad de enseñanza y manejo de la frustración</strong> (que también redunda en el estrés laboral).</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Mapa de coherencia</strong>: alinear lo que David siente, lo que David dice y lo que David vende.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">3 sesiones de 90 minutos · ejercicios prospectivos</div>
+              <div class="li"><span class="li__mk">1</span><span class="li__tx"><strong>Modelos de comunicación I</strong>: revisión enfocada en la capacitación de <strong>speaker</strong> y el plan interno de marca personal.</span></div>
+              <div class="li"><span class="li__mk">2</span><span class="li__tx"><strong>Modelos de comunicación II</strong>: continuación del plan interno de marca personal y afinación del registro comunicativo.</span></div>
+              <div class="li"><span class="li__mk">3</span><span class="li__tx"><strong>Cartografía corporal</strong>: mapear la emocionalidad presente en el proceso de marca personal.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Auditoría digital completa</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Revisión integral de activos visibles</strong>: web, perfiles sociales, curso Transformación Financiera, lead magnet, video GoAnimate, AMV vencida, copy en inglés.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Inventario de servicios digitales</strong>, corrección de inconsistencias y disclaimers legales.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">LinkedIn y redes</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>LinkedIn refactor profundo</strong>: bio, headline, destacados, foto profesional, prueba social, primeras piezas de manifiesto.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Redes</strong>: Instagram y TikTok con handles unificados, bio coherente, limpieza de contenido que erosiona la promesa.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Reemplazo del <strong>video GoAnimate</strong> por video profesional con tu rostro y tu voz.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Sanar rotas</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Corrección AMV vencida</strong>: gestión completa del trámite con el Autorregulador del Mercado de Valores.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Corrección de copy en inglés</strong> dentro del curso y revisión integral de la oferta.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Reemplazo de las expectativas no acordes a la promesa</strong> por una oferta real, alineada con Transformación Financiera.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Auditoría legal de <strong>testimonios, claims financieros y disclaimers</strong>.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Diagnóstico para prospectos</div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx"><strong>El mismo diagnóstico que respondiste se convierte en herramienta de captación.</strong> Cualifica prospectos automáticamente, segmenta por arquetipo, genera leads calificados.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Setup técnico, diseño visual e integración a tu nueva web.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 1</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric">0</span><span class="smart__txt"><strong>Cero banderas rojas visibles</strong> en el 100 % de los activos digitales auditados, al cierre del mes 1.</span></li>
+                <li class="smart__item"><span class="smart__metric sm">All&nbsp;Star</span><span class="smart__txt">LinkedIn elevado al <strong>estándar All Star</strong> (perfil completo y optimizado al 100 %).</span></li>
+                <li class="smart__item"><span class="smart__metric sm">Decisión</span><span class="smart__txt"><strong>Definición sobre la certificación AMV</strong>: se determina si es necesario o no tramitarla, según la visión y la estrategia de David.</span></li>
+                <li class="smart__item"><span class="smart__metric">3</span><span class="smart__txt"><strong>3 sesiones de 90 min</strong> de diagnóstico humano completadas (habilidades blandas, enseñanza, manejo de la frustración).</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Diagnóstico para prospectos publicado y captando</strong> leads cualificados antes del fin de mes.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MS2 -->
+      <article class="ms" id="ms-2" data-screen-label="Mes 2">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no">02</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag">Mes 2 · 1 hito</span><span class="tag tag--hot">El mes más denso</span></div>
+          <h3 class="ms__title">Kit de Marca Maestro</h3>
+          <p class="ms__intro">Uno de los meses clave en la estrategia. Definimos el método, la esencia y entregamos el Documento Maestro de 7 capítulos.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Diseño de método propio</span>
+              <span class="ms__skill">Pensamiento pedagógico</span>
+              <span class="ms__skill">Definición de pilares</span>
+              <span class="ms__skill">Perfil del estudiante</span>
+              <span class="ms__skill">Narrativa de marca</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Método · definir el "yo" de David</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Enseñar</strong>: qué se enseña, en qué orden, con qué profundidad.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Evaluar</strong>: cómo se mide el avance del estudiante.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Alegrías del estudiante</strong>: qué celebra, qué le emociona aprender.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Frustraciones del estudiante</strong>: dónde se traba, qué necesita desbloquear.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Pilares pedagógicos y perfil del estudiante</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Pilares pedagógicos</strong>: los 3 a 5 fundamentos que sostienen toda la enseñanza.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Perfil del estudiante ideal</strong>: a quién enseña David, en qué momento de vida.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Activos digitales</div>
+              <div class="li"><span class="li__mk">@</span><span class="li__tx"><strong>Handles</strong>: nombres unificados en todas las redes, claim de dominios.</span></div>
+              <div class="li"><span class="li__mk">→</span><span class="li__tx"><strong>Link maestro</strong>: URL central que organiza todo tu ecosistema.</span></div>
+              <div class="li"><span class="li__mk">✉</span><span class="li__tx"><strong>Newsletter propia</strong>: setup técnico, plantilla, primer envío.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Esencia de marca</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Arquetipo</strong> de marca consolidado y declarado.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Propuesta de Valor</strong> única en una línea.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Valores diferenciales</strong>: los 3 no negociables que te separan de la competencia.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Documento Maestro · 7 capítulos</div>
+              <div class="li"><span class="li__mk">1</span><span class="li__tx"><strong>Manifiesto</strong>: qué defendemos, qué rechazamos.</span></div>
+              <div class="li"><span class="li__mk">2</span><span class="li__tx"><strong>Quién soy</strong>: biografía estratégica.</span></div>
+              <div class="li"><span class="li__mk">3</span><span class="li__tx"><strong>Propósito</strong>: el porqué profundo.</span></div>
+              <div class="li"><span class="li__mk">4</span><span class="li__tx"><strong>Valores de Marca</strong>: los no negociables operativos.</span></div>
+              <div class="li"><span class="li__mk">5</span><span class="li__tx"><strong>Arquetipo aplicado</strong>: color, tono comunicativo, fama.</span></div>
+              <div class="li"><span class="li__mk">6</span><span class="li__tx"><strong>Pilares de comunicación</strong>: los temas centrales.</span></div>
+              <div class="li"><span class="li__mk">7</span><span class="li__tx"><strong>Cliente ideal</strong>: segmentación B2B y B2C en 3 arquetipos.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 2</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric">7</span><span class="smart__txt"><strong>Documento Maestro de 7 capítulos</strong> redactado, revisado y firmado al cierre del mes 2.</span></li>
+                <li class="smart__item"><span class="smart__metric">4</span><span class="smart__txt">Las <strong>4 dimensiones del método</strong> (enseñar, evaluar, alegrías, frustraciones) definidas y documentadas.</span></li>
+                <li class="smart__item"><span class="smart__metric sm">100 %</span><span class="smart__txt"><strong>Activos digitales operativos</strong>: handles unificados, link maestro y newsletter con primer envío realizado.</span></li>
+                <li class="smart__item"><span class="smart__metric">2</span><span class="smart__txt"><strong>Perfiles de cliente ideal B2B y B2C</strong> definidos en 3 arquetipos.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MS3 -->
+      <article class="ms" id="ms-3" data-screen-label="Mes 3">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no">03</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag">Mes 3 · 1 hito</span><span class="tag tag--hot">Estructural</span></div>
+          <h3 class="ms__title">Ruta del Estudiante</h3>
+          <p class="ms__intro">Convertimos el método en una arquitectura pedagógica replicable. Tu diferencial declarado ("método paso a paso replicable") pasa de promesa a sistema.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Diseño curricular</span>
+              <span class="ms__skill">Arquitectura por niveles</span>
+              <span class="ms__skill">Diseño de micrologros</span>
+              <span class="ms__skill">Sistemas de evaluación</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Metodología y esqueleto</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Esqueleto metodológico</strong>: estructura modular de la enseñanza completa.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Secuencia de aprendizaje y <strong>micrologros</strong> por etapa.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Ruta del estudiante en 3 niveles</div>
+              <div class="li"><span class="li__mk">A</span><span class="li__tx"><strong>Principiante</strong>: punto de entrada, conceptos base, primeras victorias rápidas.</span></div>
+              <div class="li"><span class="li__mk">B</span><span class="li__tx"><strong>Medio</strong>: consolidación, hábitos, primeras decisiones financieras propias.</span></div>
+              <div class="li"><span class="li__mk">C</span><span class="li__tx"><strong>Avanzado</strong>: sofisticación, optimización, autonomía financiera real.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Contenidos por nivel</strong> definidos.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Sistema de evaluación</div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx">La promesa medible <strong>"tendrá un plan financiero personal claro"</strong> se vuelve verificable.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Artefactos necesarios</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Landing</strong> optimizada para conversión y lista para embudo.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Diagnóstico</strong> integrado como herramienta de cualificación.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Membresía</strong> estructurada: cobro recurrente, plazas limitadas.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Prelanzamiento Hotmart</strong>: setup técnico y puesta a punto del embudo.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Preparatorias para el camino de speaker</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Pitch</strong>: versión maestra para presentar la oferta.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Discurso</strong>: estructura clara para conferencias y entrevistas.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Bios</strong>: versiones corta, media y larga unificadas.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Inicio de videos, transmisiones y contenidos</strong>: arranque del pipeline de producción.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 3</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Esqueleto metodológico</strong> completo, modular y documentado al cierre del mes 3.</span></li>
+                <li class="smart__item"><span class="smart__metric">3</span><span class="smart__txt"><strong>Ruta del Estudiante en 3 niveles</strong> (principiante, medio, avanzado) diseñada con contenidos por nivel.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Sistema de evaluación construido</strong>: la promesa "plan financiero personal claro" se vuelve verificable.</span></li>
+                <li class="smart__item"><span class="smart__metric">4</span><span class="smart__txt"><strong>4 artefactos listos</strong>: landing, diagnóstico, membresía y prelanzamiento Hotmart configurado.</span></li>
+                <li class="smart__item"><span class="smart__metric">3</span><span class="smart__txt"><strong>Pitch, discurso y bios</strong> preparatorios definidos e inicio del pipeline de videos y contenidos.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MS4 -->
+      <article class="ms" id="ms-4" data-screen-label="Mes 4">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no" style="color:var(--green-bright)">04</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag tag--money">Break-even</span><span class="tag tag--hot">Dinero entrando</span></div>
+          <h3 class="ms__title">Lanzamiento Hotmart</h3>
+          <p class="ms__intro">Aquí cumplimos tu compromiso de break-even. Construimos los artefactos y lanzamos en Hotmart con cobro recurrente entrando antes de mitad del acompañamiento.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Monetización digital</span>
+              <span class="ms__skill">Embudos de venta</span>
+              <span class="ms__skill">Gestión de Hotmart</span>
+              <span class="ms__skill">Estrategia de lanzamiento</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Refactor pedagógico y escalera</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Refactor de Transformación Financiera 2.0</strong> aplicando la Ruta del Estudiante.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Arquitectura de cursos escalera</strong>: básico, intermedio, avanzado y premium.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Pliego <strong>MVP de la app de Libertad Financiera</strong> entregado a desarrollador.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Artefactos de lanzamiento</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Landing</strong> optimizada para conversión, embudo Hotmart ready.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Diagnóstico</strong> integrado al embudo como herramienta de cualificación.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Membresía cerrada</strong>: cobro recurrente, plazas limitadas, ticket alto.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Lanzamiento en Hotmart</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Setup técnico</strong>: cobro recurrente Hotmart, comunidad privada, onboarding.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Campaña de lanzamiento con tu base de <strong>LinkedIn, Portafolio, iNNpulsa</strong>.</span></div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx">Captura de los <strong>primeros 50 fundadores</strong> pagando membresía recurrente.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 4</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric sm">2.0</span><span class="smart__txt"><strong>Transformación Financiera 2.0</strong> refactorizada con la Ruta del Estudiante y publicada.</span></li>
+                <li class="smart__item"><span class="smart__metric">4</span><span class="smart__txt"><strong>Arquitectura de cursos escalera</strong> (básico, intermedio, avanzado, premium) definida.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Primer workshop en vivo de lanzamiento</strong> ejecutado: evento de apertura que activa la oferta.</span></li>
+                <li class="smart__item"><span class="smart__metric sm">Live</span><span class="smart__txt"><strong>Embudo Hotmart operando</strong>: landing, diagnóstico y membresía con cobro recurrente.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Pliego del MVP</strong> de la app de Libertad Financiera entregado a desarrollador.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MS5 -->
+      <article class="ms" id="ms-5" data-screen-label="Mes 5">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no">05</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag">Mes 5 · 1 hito</span><span class="tag tag--hot">Voz de David</span></div>
+          <h3 class="ms__title">SPEAKER · Parte Dos</h3>
+          <p class="ms__intro">Con el producto vendiéndose, estandarizamos tu voz y construimos el sistema que multiplica esa voz en todos los canales.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Oratoria y pitch</span>
+              <span class="ms__skill">Presencia en cámara</span>
+              <span class="ms__skill">Sistema de contenidos</span>
+              <span class="ms__skill">Comunicación multicanal</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Pitch y discurso</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Pitch maestro</strong> en 3 versiones: 30 segundos, 2 minutos, 5 minutos.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Discurso</strong> con estructura clara para conferencias, entrevistas y videos.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Videos</strong>: formatos definidos con guion repetible.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Transmisión SPEAKER</strong>: formato de captura tipo conferencia reutilizable.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Publicaciones</strong>: línea editorial unificada multicanal.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Ejecución · sistema de contenidos</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Calendario editorial: <strong>LinkedIn, Instagram, YouTube largos, podcast propio</strong>.</span></div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx">Pipeline: tú grabas <strong>1 vez por semana</strong>, el equipo genera unas <strong>30 piezas al mes</strong>.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Videos, edición y contenido a cargo del <strong>equipo de edición de N &amp; J</strong>.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Dashboard semanal de alcance y conversiones.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 5</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric sm">3 F</span><span class="smart__txt"><strong>Identidad de speaker en fondo, foco y forma</strong>: qué dice David, en qué se centra y cómo lo comunica, definido y documentado.</span></li>
+                <li class="smart__item"><span class="smart__metric">3</span><span class="smart__txt"><strong>Bio corta, bio larga y dossier</strong> de speaker construidos, más el <strong>pitch maestro</strong> listo para presentar.</span></li>
+                <li class="smart__item"><span class="smart__metric">30</span><span class="smart__txt"><strong>30 piezas mensuales</strong> operando con 1 grabación semanal de David.</span></li>
+                <li class="smart__item"><span class="smart__metric sm">N &amp; J</span><span class="smart__txt"><strong>Equipo de edición de N &amp; J</strong> desarrollando videos, edición y contenido, con dashboard semanal activo.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- MS6 -->
+      <article class="ms" id="ms-6" data-screen-label="Mes 6">
+        <div class="ms__left" data-reveal>
+          <div class="ms__index"><span class="ms__no">06</span></div>
+          <div class="ms__tags" style="margin-top:14px"><span class="tag tag--money">Cierre</span><span class="tag tag--hot">Institucional</span></div>
+          <h3 class="ms__title">Guías Académicas y Estructura</h3>
+          <p class="ms__intro">Cierre de ciclo. Formalizamos toda la operación académica en guías profesionales, consolidamos la estructura institucional y plantamos la primera bandera mediática.</p>
+          <div class="ms__skills">
+            <div class="ms__skills-k">Skills que David habilita o refuerza</div>
+            <div class="ms__skillchips">
+              <span class="ms__skill">Documentación institucional</span>
+              <span class="ms__skill">Estandarización editorial</span>
+              <span class="ms__skill">Formalización y escalamiento</span>
+              <span class="ms__skill">Vocería mediática</span>
+            </div>
+          </div>
+        </div>
+        <div class="ms__right">
+          <div class="ms__groups">
+            <div class="group" data-reveal>
+              <div class="group__h">Guías académicas</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Perfil del Facilitador</strong>: quién enseña, con qué credenciales, con qué tono.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Perfil del Estudiante</strong>: para quién es cada nivel.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Objetivos</strong> por curso y módulo.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Temario</strong> detallado del programa completo.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Material de aprendizaje</strong>: guías, plantillas, recursos descargables.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Estructura institucional</div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Estructura <strong>institucional formal</strong>: qué se llama escuela, programa, membresía.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Documentación lista para <strong>escalar</strong>.</span></div>
+            </div>
+            <div class="group" data-reveal>
+              <div class="group__h">Autoridad mediática</div>
+              <div class="li star-li"><span class="li__mk star">★</span><span class="li__tx"><strong>Booking de 1 conferencia de 500 personas.</strong></span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Sinopsis del libro</strong>, estructura capitular y pitch editorial enviado.</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx">Plan de PR: 10 medios objetivo (Portafolio, Semana, El Tiempo, La República, Forbes Colombia).</span></div>
+              <div class="li"><span class="li__mk">✓</span><span class="li__tx"><strong>Plan de continuidad</strong> post seis meses.</span></div>
+            </div>
+            <div class="smart" data-reveal>
+              <div class="smart__head"><span class="smart__badge">Hito Mes 6</span><span class="smart__tag">Objetivos SMART</span></div>
+              <ul class="smart__list">
+                <li class="smart__item"><span class="smart__metric">5</span><span class="smart__txt"><strong>Guías académicas oficiales</strong> entregadas: facilitador, estudiante, objetivos, temario y material.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Estructura institucional formal</strong> documentada y lista para escalar, acompañada de <strong>landing page</strong> oficial.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Propuesta editorial del libro</strong> (sinopsis + estructura capitular) enviada, con plan de PR a 10 medios.</span></li>
+                <li class="smart__item"><span class="smart__metric">1</span><span class="smart__txt"><strong>Plan de continuidad</strong> post seis meses firmado.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===================== DEDICACIÓN REAL ===================== -->
+<section class="section dedica" id="dedicacion" data-screen-label="Dedicación real">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:40ch">
+      <span class="eyebrow">Dedicación real del equipo</span>
+      <h2 class="display shead__title">Tú ves <em>2 horas</em>. Detrás hay <em>720</em>.</h2>
+      <p class="shead__sub">El encuentro semanal contigo es <strong>la punta del iceberg</strong>. Por cada hora frente a ti, el equipo — mentoría, diseño, producción y el <strong>equipo de edición de video y contenido</strong> — invierte cerca de <strong>trece horas</strong> que no ves, pero que son las que hacen que esas 2 horas rindan.</p>
+    </div>
+
+    <div class="ded__nums" data-reveal>
+      <div class="ded__num is-small"><div class="n"><span data-reveal data-count="2" data-dec="0">2</span></div><div class="lbl">Horas en vivo contigo / semana</div></div>
+      <div class="ded__num is-mid"><div class="n"><span data-reveal data-count="28" data-dec="0">28</span></div><div class="lbl">Horas reales del equipo / semana</div></div>
+      <div class="ded__num is-big"><div class="n"><span data-reveal data-count="720" data-dec="0">720</span><span class="suffix">+</span></div><div class="lbl">Horas de dedicación en 6 meses</div></div>
+    </div>
+
+    <div class="ded__ratio" data-reveal>
+      <div class="ded__ratio-k">Tu semana, a escala real</div>
+      <div class="ded__rtrack">
+        <div class="ded__rseg ded__rseg--live" style="--w:7%"><span class="rs-h">2 h</span></div>
+        <div class="ded__rseg ded__rseg--off" style="--w:93%"><span class="rs-h">~26 h</span><span class="rs-t">Trabajo en off — invisible para ti</span></div>
+      </div>
+    </div>
+
+    <div class="ded__topics" data-reveal>
+      <div class="ded__topics-k">En qué se invierte cada semana, por tema</div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Edición de video y postproducción</span><span class="dtopic__meta">21 % · ~6 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:21%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Producción de contenido, piezas y material</span><span class="dtopic__meta">18 % · ~5 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:18%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Encuentro contigo y preparación de cada sesión</span><span class="dtopic__meta">12 % · ~3.5 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:12%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Diseño del método y arquitectura pedagógica</span><span class="dtopic__meta">12 % · ~3.5 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:12%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Marca, esencia y ecosistema de monetización</span><span class="dtopic__meta">11 % · ~3 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:11%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Speaker, oratoria y red institucional</span><span class="dtopic__meta">9 % · ~2.5 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:9%"></div></div>
+      </div>
+      <div class="dtopic">
+        <div class="dtopic__top"><span class="dtopic__name">Documentación, coordinación y control de calidad</span><span class="dtopic__meta">17 % · ~4.5 h</span></div>
+        <div class="dtopic__track"><div class="dtopic__fill" style="--w:17%"></div></div>
+      </div>
+    </div>
+
+    <p class="ded__foot" data-reveal><strong>No es un plano constante.</strong> Los meses de diagnóstico, diseño del método y el cierre institucional son de alta intensidad (la dedicación puede subir por encima de 36 h/semana); los de ejecución y consolidación bajan. Estas horas <strong>ya incluyen al equipo de edición de video y contenido</strong>, además de la mentoría, el diseño y la producción directa del equipo.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===================== MODELO ECONÓMICO ===================== -->
+<section class="section" id="modelo">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:34ch">
+      <span class="eyebrow">El modelo económico</span>
+      <h2 class="display shead__title">No es un retainer, es una <em>sociedad de dos capas</em>.</h2>
+      <p class="shead__sub"><strong>Capa 1</strong>: fijo mensual razonable durante los 6 meses. <strong>Capa 2</strong>: coproducción Hotmart <strong>permanente</strong>.</p>
+    </div>
+
+    <div class="layers" style="margin-top:56px">
+      <div class="layer" data-reveal data-tilt="3">
+        <div class="layer__k">Capa 1 · fijo mensual</div>
+        <div class="layer__big">$9.5M <span style="font-size:0.35em;color:var(--ink-soft)">COP / mes</span></div>
+        <div class="layer__note">Total 6 meses: <strong>$57M COP</strong>.</div>
+        <table class="ltable">
+          <tr><td>Estrategia, marca, reputación, plataforma</td><td></td></tr>
+          <tr><td>Arquitectura pedagógica y metodología</td><td></td></tr>
+          <tr><td>Producción (edición, contenido, diseño)</td><td></td></tr>
+          <tr><td>Total fijo mensual</td><td>$9.5M</td></tr>
+        </table>
+        <div class="layer__foot" style="background:var(--green-haze)"><strong>+ 10 % por intercambio:</strong> sobre el pago mensual recibimos un 10 % como intercambio para construir un producto dirigido a emprendedores, comercializable en nuestra red emprendedora. Es acumulable sobre el valor total durante los 6 meses.</div>
+        <div class="layer__note" style="margin-top:18px"><strong>Pago por anticipado</strong> cada mes, dentro de los primeros 5 días.</div>
+      </div>
+      <div class="layer layer--2" data-reveal data-delay="1" data-tilt="3">
+        <div class="layer__k">Capa 2 · coproducción Hotmart</div>
+        <div class="layer__big">50 / 25 / 25</div>
+        <div class="layer__note">Sobre todo producto creado o refactorizado. <strong>Permanente</strong>.</div>
+        <table class="ltable">
+          <tr><td>David — rostro, marca, contenido</td><td>50 %</td></tr>
+          <tr><td>Nathalia — arquitectura pedagógica</td><td>25 %</td></tr>
+          <tr><td>Jorge — plataforma, marca, embudo</td><td>25 %</td></tr>
+        </table>
+        <div class="layer__foot"><strong>Membresía cerrada, trato especial:</strong> David 70 %, Nathalia 15 %, Jorge 15 % durante los primeros 24 meses.</div>
+      </div>
+    </div>
+
+    <span class="eyebrow faint" style="display:block;margin-top:60px" data-reveal>Productos que entran a coproducción</span>
+    <div class="prods" data-reveal data-delay="1">
+      <div class="prod"><div class="prod__phase">Fase 4 · refactor</div><div class="prod__name">Transformación Financiera 2.0</div></div>
+      <div class="prod"><div class="prod__phase">Fase 4 · nuevo</div><div class="prod__name">Curso Intermedio (escalera)</div></div>
+      <div class="prod"><div class="prod__phase">Fase 4 / 5 · nuevo</div><div class="prod__name">Curso Avanzado o Masterclass</div></div>
+      <div class="prod"><div class="prod__phase">Motor recurrente</div><div class="prod__name">Membresía Fundadora</div></div>
+      <div class="prod"><div class="prod__phase">Fase 5 / 6 · autoridad</div><div class="prod__name">Libro digital / ebook</div></div>
+      <div class="prod"><div class="prod__phase">Eventual</div><div class="prod__name">Otros derivados</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===================== RUBROS DEL CLIENTE ===================== -->
+<section class="section" id="rubros" data-screen-label="Rubros del cliente">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:38ch">
+      <span class="eyebrow">Fuera del fijo mensual</span>
+      <h2 class="display shead__title">Rubros gestionados o cubiertos <em>directamente por el cliente</em>.</h2>
+      <p class="shead__sub">Estos costos <strong>no están incluidos</strong> en el fijo mensual ni en la coproducción. Son valores referenciales de mercado (Bogotá, 2026) que David gestiona y paga de forma directa según la operación de cada evento o entrega.</p>
+    </div>
+
+    <div class="rubros">
+
+      <div class="rubro" data-reveal>
+        <div class="rubro__k">Logística · Bogotá</div>
+        <div class="rubro__name">Espacios y catering</div>
+        <div class="rubro__desc">El costo varía según el perfil del evento (talleres de co-creación vs. conferencias magistrales).</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Salón para 30 personas — jornada 4–5 h<small>Hoteles corporativos (norte/salitre) o universidades. Incluye montaje en U o taller, tablero y pantalla.</small></div><div class="ritem__p">$600K – $1.2M</div></div>
+          <div class="ritem"><div class="ritem__t">Auditorio para 500 personas<small>Universidades, centros de convenciones u hoteles 5★. Según ubicación y ayudas audiovisuales de gran formato.</small></div><div class="ritem__p">$4.5M – $9.5M</div></div>
+          <div class="ritem"><div class="ritem__t">Estación de café permanente<small>Café, agua, aromática — por persona.</small></div><div class="ritem__p">$8.5K – $12K</div></div>
+          <div class="ritem"><div class="ritem__t">Coffee break corporativo<small>Bebida caliente + sal/dulce + jugo — por persona.</small></div><div class="ritem__p">$18K – $32K</div></div>
+        </div>
+        <div class="rubro__note">Grupos de +100 personas: descuento por volumen de 10–15 % sobre el menú.</div>
+      </div>
+
+      <div class="rubro" data-reveal data-delay="1">
+        <div class="rubro__k">Protocolo</div>
+        <div class="rubro__name">Personal para eventos</div>
+        <div class="rubro__desc">Personal calificado para registro de asistencia, entrega de escarapelas y materiales, y direccionamiento.</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Tarifa por persona — jornada hasta 6 h<small>Por logístico / bilingüe.</small></div><div class="ritem__p">$140K – $180K</div></div>
+          <div class="ritem"><div class="ritem__t">Aforo 30 personas<small>2 personas de apoyo (mínimo operativo).</small></div><div class="ritem__p">2 pers.</div></div>
+          <div class="ritem"><div class="ritem__t">Aforo 100–250 personas</div><div class="ritem__p">3 – 4 pers.</div></div>
+          <div class="ritem"><div class="ritem__t">Aforo 500 personas<small>Máximo sugerido para evitar cuellos de botella en el ingreso.</small></div><div class="ritem__p">5 pers.</div></div>
+        </div>
+      </div>
+
+      <div class="rubro" data-reveal>
+        <div class="rubro__k">Producción física</div>
+        <div class="rubro__name">Impresión de material de trabajo</div>
+        <div class="rubro__desc">Costo de producción física de las bitácoras o guías de estudio diseñadas en la asesoría.</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Guía básica<small>Blanco y negro, argollada o grapada — por unidad.</small></div><div class="ritem__p">desde $9.5K</div></div>
+          <div class="ritem"><div class="ritem__t">Cartilla premium<small>Policromía, papel propalcote, lomo pegado / pasta blanda — por unidad.</small></div><div class="ritem__p">hasta $35K</div></div>
+        </div>
+      </div>
+
+      <div class="rubro" data-reveal data-delay="1">
+        <div class="rubro__k">Audiovisuales</div>
+        <div class="rubro__name">Equipos tecnológicos</div>
+        <div class="rubro__desc">Alquiler de soporte técnico cuando el salón contratado no lo incluye en su tarifa base.</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Kit de sonido básico<small>Consola + 2 cabinas + 1 micrófono inalámbrico — por día.</small></div><div class="ritem__p">$350K – $600K</div></div>
+          <div class="ritem"><div class="ritem__t">Micrófono inalámbrico adicional<small>Vincha o solapa — por unidad.</small></div><div class="ritem__p">$80K – $120K</div></div>
+          <div class="ritem"><div class="ritem__t">Apuntador profesional<small>Clicker / presenter — por día.</small></div><div class="ritem__p">$40K – $60K</div></div>
+        </div>
+      </div>
+
+      <div class="rubro" data-reveal>
+        <div class="rubro__k">Pre-producción</div>
+        <div class="rubro__name">Alistamiento de materiales</div>
+        <div class="rubro__desc">Personal operativo destinado al ensamble de kits, empaque de materiales y preparación previa.</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Tarifa base legal — por jornada<small>Sobre el SMMLV 2026: día laboral + carga prestacional básica por día cobrado por el proveedor.</small></div><div class="ritem__p">$85K – $110K</div></div>
+        </div>
+      </div>
+
+      <div class="rubro rubro--ia" data-reveal data-delay="1">
+        <div class="rubro__k">Licencias de IA · 6 meses</div>
+        <div class="rubro__name">Herramientas de inteligencia artificial</div>
+        <div class="rubro__desc">Entorno de IA para producción de contenido, investigación y asistencia del método durante los 6 meses del acompañamiento.</div>
+        <div class="rubro__items">
+          <div class="ritem"><div class="ritem__t">Gemini<small>USD 20 / mes × 6 meses.</small></div><div class="ritem__p">$120 USD</div></div>
+          <div class="ritem"><div class="ritem__t">Claude<small>USD 20 / mes × 6 meses.</small></div><div class="ritem__p">$120 USD</div></div>
+          <div class="ritem"><div class="ritem__t"><strong>Total licencias IA</strong></div><div class="ritem__p">$240 USD</div></div>
+        </div>
+        <div class="rubro__note">Suscripciones mensuales a nombre del cliente; quedan como activo propio tras el acompañamiento.</div>
+      </div>
+
+    </div>
+
+    <p class="rubros__foot" data-reveal><strong>Nota.</strong> Los valores en COP son referencias de mercado en Bogotá y pueden variar según proveedor, fecha y aforo. Las licencias de IA se facturan en USD. Todos estos rubros se cotizan y pagan por separado del honorario fijo y de la coproducción.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===================== BLINDAJE ===================== -->
+<section class="section" id="blindaje">
+  <div class="wrap">
+    <div class="shead" data-reveal style="max-width:30ch">
+      <span class="eyebrow">Blindaje de ambos lados</span>
+      <h2 class="display shead__title">Las cláusulas que <em>protegen a todos</em>.</h2>
+      <p class="shead__sub">Esto no es un contrato a ciegas. Son los compromisos cruzados que blindan tanto tu inversión como nuestro trabajo.</p>
+    </div>
+
+    <div class="shield" style="margin-top:56px">
+      <div class="scol" data-reveal>
+        <div class="scol__h"><svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="var(--green)" stroke-width="1.4"/><path d="M8.5 12l2.3 2.3 4.7-4.7" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">Te protege a ti</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Hitos verificables cada fase.</strong> Si no cumplimos, el mes siguiente va sin cargo hasta corregir.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Reporte mensual</strong> y sesión semanal de 60 minutos.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Toda la IP queda a tu nombre.</strong></span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Coproducción contractual</strong>, registrada en cuenta de codistribución Hotmart.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Cláusula de salida</strong> si 2 fases consecutivas no se cumplen.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Exclusividad de categoría de N&amp;J</strong>: no trabajamos otra marca personal que maneje temas financieros mientras dure el acompañamiento, salvo que se acuerde un plazo distinto.</span></div>
+      </div>
+      <div class="scol" data-reveal data-delay="1">
+        <div class="scol__h"><svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="var(--green)" stroke-width="1.4"/><circle cx="12" cy="11" r="2.2" stroke="var(--green)" stroke-width="1.4"/><path d="M12 13.2V16" stroke="var(--green)" stroke-width="1.4" stroke-linecap="round"/></svg><span class="t">Nos protege a nosotros</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Compromiso 6 meses</strong> con pago mensual asegurado mientras cumplamos hitos.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Exclusividad durante 6 meses</strong>: no contratas otra agencia que duplique funciones.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Coproducción permanente</strong> sobre los productos creados o refactorizados.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Disponibilidad mínima</strong>: sesión semanal, materiales, grabaciones programadas.</span></div>
+        <div class="scol__item"><span class="mk">✓</span><span class="tx"><strong>Confidencialidad mutua</strong> sobre números, métricas y desarrollos.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="close section" id="cta" data-screen-label="Cierre">
+  <div class="hero__grain" style="opacity:0.6"><svg width="100%" height="100%"><rect width="100%" height="100%" filter="url(#grain)"/></svg></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="eyebrow" data-reveal>¿Y ahora?</span>
+    <h2 class="close__h" data-reveal data-delay="1" style="margin-top:22px">Esto no termina en una firma. Empieza en una <em>conversación</em>.</h2>
+    <p class="close__sub" data-reveal data-delay="2">Si esta propuesta tiene sentido para ti, agendemos una sesión de 60 minutos para resolver dudas, ajustar lo que haya que ajustar y arrancar el lunes siguiente.</p>
+    <div data-reveal data-delay="3" style="display:flex;justify-content:center">
+      <a href="/cdn-cgi/l/email-protection#a0cacfd2c7c5c8d5c7cfd0c5d2c5dae0c9c3cfcec5c9c1ccc1c2d38ec3cfcd9fd3d5c2cac5c3d49de1c7c5cec4c1d2859290d3c5d3c985e39385e293ce859290c4c5859290c4c5c3c9d3c985e39385e293ce" class="btn btn--light">Agendar sesión de decisión <span class="arrow">→</span></a>
+    </div>
+    <div class="close__valid" data-reveal data-delay="4">Esta propuesta es válida por <strong>15 días</strong> desde su entrega</div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <div class="footer__brand">Nathalia <span class="amp">&amp;</span> Jorge</div>
+      <p class="footer__meta">Acompañamiento estratégico para David Alexander Aponte Becerra. Propuesta generada a partir del diagnóstico del 22 de mayo de 2026.</p>
+    </div>
+    <div class="footer__conf">Confidencial · <span id="year">2026</span></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ============================================================
+   PROPUESTA DAVID APONTE — Interacciones
+   ============================================================ */
+(function () {
+  "use strict";
+  const $  = (s, c) => (c || document).querySelector(s);
+  const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Nav scroll state + progress ---------- */
+  const nav = $(".nav");
+  const prog = $(".scroll-progress");
+  function onScroll() {
+    const y = window.scrollY;
+    if (nav) nav.classList.toggle("scrolled", y > 40);
+    if (prog) {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Reveal on scroll ---------- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        // fire any sub-animations
+        if (e.target.dataset.count !== undefined) animateCount(e.target);
+        if (e.target.classList.contains("bars")) animateBars(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+  $$("[data-reveal]").forEach((el) => io.observe(el));
+
+  /* ---------- Number counters ---------- */
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.count);
+    const dec = parseInt(el.dataset.dec || "0", 10);
+    const dur = reduce ? 0 : 1400;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    function step(now) {
+      const t = Math.min(1, (now - start) / (dur || 1));
+      const v = target * ease(t);
+      el.firstChild.textContent = v.toFixed(dec);
+      if (t < 1) requestAnimationFrame(step);
+      else el.firstChild.textContent = target.toFixed(dec);
+    }
+    if (dur === 0) { el.firstChild.textContent = target.toFixed(dec); }
+    else requestAnimationFrame(step);
+  }
+
+  /* ---------- Bars ---------- */
+  function animateBars(container) {
+    $$(".bar__fill", container).forEach((f, i) => {
+      setTimeout(() => { f.style.width = f.dataset.w + "%"; }, reduce ? 0 : i * 120);
+    });
+  }
+
+  /* ---------- Tilt 3D on cards ---------- */
+  if (!reduce && window.matchMedia("(hover: hover)").matches) {
+    $$("[data-tilt]").forEach((card) => {
+      const max = parseFloat(card.dataset.tilt) || 6;
+      card.style.transformStyle = "preserve-3d";
+      card.style.transition = "transform 0.3s var(--ease)";
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${-py * max}deg) translateZ(0)`;
+      });
+      card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+    });
+  }
+
+  /* ---------- Parallax (hero seal + grain) ---------- */
+  if (!reduce) {
+    const plx = $$("[data-plx]");
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      plx.forEach((el) => {
+        const s = parseFloat(el.dataset.plx);
+        el.style.transform = `translate3d(0, ${y * s}px, 0)`;
+      });
+    }, { passive: true });
+  }
+
+  /* ---------- Roadmap rail sync ---------- */
+  const chips = $$(".railchip");
+  const msSections = $$(".ms");
+  function syncRail() {
+    let activeIdx = -1;
+    const mid = window.innerHeight * 0.4;
+    msSections.forEach((s, i) => {
+      const r = s.getBoundingClientRect();
+      if (r.top <= mid && r.bottom >= mid) activeIdx = i;
+    });
+    chips.forEach((c, i) => {
+      c.classList.toggle("active", i === activeIdx + 1); // +1 because chip 0 is Momento Cero
+    });
+  }
+  chips.forEach((c) => {
+    c.addEventListener("click", () => {
+      const tgt = c.dataset.go;
+      if (tgt) {
+        const el = $("#" + tgt);
+        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: reduce ? "auto" : "smooth" });
+      }
+    });
+  });
+  if (msSections.length) {
+    window.addEventListener("scroll", syncRail, { passive: true });
+    syncRail();
+  }
+
+  /* ============================================================
+     SIMULADOR
+     ============================================================ */
+  const fmt = (n) => {
+    // millones COP, 1 decimal si <100
+    if (n >= 100) return Math.round(n).toString();
+    return (Math.round(n * 10) / 10).toString();
+  };
+
+  const sim = {
+    ventas: $("#sim-ventas"),
+    memb: $("#sim-memb"),
+    horizonte: $("#sim-horizonte"),
+    outVentas: $("#out-ventas"),
+    outMemb: $("#out-memb"),
+    outHor: $("#out-hor"),
+    pDavid: $("#pay-david"),
+    pNat: $("#pay-nat"),
+    pJorge: $("#pay-jorge"),
+    fDavid: $("#fill-david"),
+    fNat: $("#fill-nat"),
+    fJorge: $("#fill-jorge"),
+    aDavid: $("#acc-david"),
+    aNat: $("#acc-nat"),
+    aJorge: $("#acc-jorge"),
+    roi: $("#acc-roi"),
+  };
+
+  const FIJO = 57; // millones COP pagados
+
+  function recalc() {
+    if (!sim.ventas) return;
+    const ventas = parseFloat(sim.ventas.value);      // M COP / mes
+    const membPct = parseFloat(sim.memb.value) / 100;  // % de ventas que es membresía
+    const meses = parseFloat(sim.horizonte.value);
+
+    sim.outVentas.textContent = "$" + fmt(ventas) + "M";
+    sim.outMemb.textContent = Math.round(membPct * 100) + "%";
+    sim.outHor.textContent = meses + " meses";
+
+    const membVentas = ventas * membPct;       // membresía: 70/15/15
+    const cursoVentas = ventas * (1 - membPct); // cursos: 50/25/25
+
+    // reparto mensual estado estable
+    const mDavid = membVentas * 0.70 + cursoVentas * 0.50;
+    const mNat   = membVentas * 0.15 + cursoVentas * 0.25;
+    const mJorge = membVentas * 0.15 + cursoVentas * 0.25;
+
+    sim.pDavid.textContent = "$" + fmt(mDavid) + "M";
+    sim.pNat.textContent   = "$" + fmt(mNat) + "M";
+    sim.pJorge.textContent = "$" + fmt(mJorge) + "M";
+
+    const maxM = Math.max(mDavid, mNat, mJorge) || 1;
+    sim.fDavid.style.width = (mDavid / maxM) * 100 + "%";
+    sim.fNat.style.width   = (mNat / maxM) * 100 + "%";
+    sim.fJorge.style.width = (mJorge / maxM) * 100 + "%";
+
+    // acumulado horizonte
+    const aD = mDavid * meses, aN = mNat * meses, aJ = mJorge * meses;
+    sim.aDavid.textContent = "$" + fmt(aD) + "M";
+    sim.aNat.textContent   = "$" + fmt(aN) + "M";
+    sim.aJorge.textContent = "$" + fmt(aJ) + "M";
+
+    const roi = aD / FIJO;
+    sim.roi.textContent = (Math.round(roi * 10) / 10) + "x";
+  }
+  [sim.ventas, sim.memb, sim.horizonte].forEach((el) => {
+    if (el) el.addEventListener("input", recalc);
+  });
+  recalc();
+
+  /* ---------- Footer year ---------- */
+  const yr = $("#year");
+  if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
